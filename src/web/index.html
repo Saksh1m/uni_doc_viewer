@@ -1,0 +1,6 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Universal File Viewer</title><link rel="stylesheet" href="/vendor/pdf/pdf_viewer.css"><link rel="stylesheet" href="/style.css"><script src="/viewer.js" defer></script></head>
+<body><a class="skip-link" href="#reader">Skip to document</a><header><h1 id="name">Universal File Viewer</h1><p>Local, read-only file viewer</p></header>
+<div class="toolbar" id="tools" hidden><label id="wrap-label"><input type="checkbox" id="wrap" checked> Wrap lines</label><button type="button" id="print" hidden>Print</button><button type="button" id="close">End viewing session</button></div>
+<div class="toolbar" id="format-tools" hidden></div><p id="status" role="status" tabindex="-1">Opening your local file…</p><div class="recovery"><button type="button" id="cancel" hidden>Cancel loading</button><button type="button" id="retry" hidden>Retry connection</button></div>
+<main id="reader" tabindex="-1" aria-label="Document" aria-busy="false"><pre id="content" tabindex="0" aria-label="File contents"></pre><div id="rendered" tabindex="0" role="region" aria-label="Rendered document" hidden></div></main><footer>Opened locally. The original file is unchanged. Reading views may differ from the authoring application.</footer></body></html>

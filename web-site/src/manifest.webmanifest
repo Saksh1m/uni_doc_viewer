@@ -1,0 +1,5 @@
+{
+ "id":"/", "name":"Universal File Viewer", "short_name":"File Viewer", "description":"Read local documents without uploading them.", "start_url":"/", "scope":"/", "display":"standalone", "background_color":"#f4f6f3", "theme_color":"#123f30",
+ "icons":[{"src":"/icon-192.png","sizes":"192x192","type":"image/png"},{"src":"/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}],
+ "file_handlers":[{"action":"/","name":"Read local document","launch_type":"multiple-clients","accept":{"application/pdf":[".pdf"],"text/plain":[".txt"],"text/markdown":[".md"],"text/csv":[".csv"],"text/tab-separated-values":[".tsv"],"application/epub+zip":[".epub"],"application/vnd.openxmlformats-officedocument.wordprocessingml.document":[".docx"],"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":[".xlsx"],"image/png":[".png"],"image/jpeg":[".jpg",".jpeg"],"image/webp":[".webp"]}}]
+}

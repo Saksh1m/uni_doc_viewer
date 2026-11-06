@@ -1,0 +1,31 @@
+{
+  "status": "proposed-for-integration-not-production-enforcement",
+  "basis": "Step 4 synthetic fixtures on Windows 11, about 8 GB RAM, 12 logical processors. Limits are engineering starting points, not universal safe limits.",
+  "concurrentHeavyParsesPerSession": 1,
+  "workerTimeoutMs": 30000,
+  "archiveMaxEntries": 10000,
+  "archiveMaxDeclaredExpandedBytes": 268435456,
+  "rejectZip64UntilSupported": true,
+  "formats": {
+    "pdf": { "maxInputBytes": 157286400, "delivery": "authenticated HTTP ranges", "maxConcurrentRenderedPages": 2, "maxCanvasPixelsPerPage": 16000000 },
+    "docx": { "maxInputBytes": 12582912, "conversion": "worker with binary image transfer", "maxEmbeddedImagePixels": 24000000, "maxTotalDecodedImagePixels": 80000000 },
+    "epub": { "maxInputBytes": 25165824, "rendering": "one active chapter; no document scripts or automatic external resources" },
+    "xlsx": { "maxInputBytes": 12582912, "maxPopulatedCells": 100000, "parsing": "worker; normalize unavailable formula caches; no recalculation" },
+    "csv": { "maxInputBytes": 25165824, "maxDataRows": 100000, "parsing": "worker row callbacks; no numeric coercion" },
+    "markdown": { "maxInputBytes": 2097152, "rendering": "sanitized isolated reading view" }
+  },
+  "enforcedInLab": [
+    "30-second DOCX and data worker timeout",
+    "10000 ZIP central-directory entries",
+    "256 MiB declared expanded ZIP bytes, with lower test budget for expansion probe",
+    "ZIP traversal-name and ZIP64 rejection"
+  ],
+  "requiredBeforeProduction": [
+    "enforce input limits before allocating whole-file buffers",
+    "enforce actual decompressed-byte limits rather than trusting archive metadata",
+    "enforce image pixel, canvas, cell and row budgets",
+    "cancel parsing and dispose workers, images, canvases and object URLs",
+    "measure release timing and memory with all supporting assets loaded on demand",
+    "test caps against additional real authoring-tool documents and other supported browsers"
+  ]
+}

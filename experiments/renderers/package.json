@@ -1,0 +1,21 @@
+{
+  "name": "ufv-renderer-experiments",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "dompurify": "3.4.17",
+    "epubjs": "0.3.93",
+    "jszip": "3.10.2",
+    "mammoth": "1.13.0",
+    "marked": "18.1.3",
+    "papaparse": "5.7.0",
+    "pdfjs-dist": "6.5.438",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  },
+  "overrides": {
+    "@xmldom/xmldom": "0.9.12"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

@@ -1,0 +1,13 @@
+.venv-fixtures/
+__pycache__/
+tests/fixtures/generated/
+tests/fixtures/verification.json
+tests/fixtures/verification-before.json
+tests/fixtures/run-work/
+dist/
+tests/results/
+node_modules/
+src/web/vendor/
+src/THIRD-PARTY-NOTICES.json
+experiments/renderers/generated/
+experiments/renderers/results/
