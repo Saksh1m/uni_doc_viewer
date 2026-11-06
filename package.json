@@ -4,6 +4,9 @@
   "private": true,
   "description": "Windows local read-only file viewer prototype",
   "scripts": {
+    "start": "npm run build:web && node tools/preview-web.cjs",
+    "build:web": "node tools/build-renderers.cjs && node tools/build-web.cjs",
+    "test:web": "node --test tests/web-site.test.cjs",
     "test": "node --test tests/broker.test.cjs tests/lifecycle.test.cjs tests/resource-guards.test.cjs",
     "test:renderers": "node --test tests/renderers.test.cjs",
     "test:ipc": "node --test tests/ipc.test.cjs",

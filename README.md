@@ -1,5 +1,18 @@
 # Universal File Viewer
 
+## Run the browser site
+
+The browser-only edition reads files you select directly on your device. It does not need the Windows launcher. Install Node.js 22, then run these commands in the project folder:
+
+```sh
+npm ci
+npm start
+```
+
+Open **http://127.0.0.1:4173/** in Chrome or Edge. This is a fixed local address, not a one-time file link. Keep the command running while using the site. On Windows, use `npm.cmd ci` and `npm.cmd start` if PowerShell does not recognize `npm`; on macOS or Linux, use `npm`. `npm.cmd run` by itself only lists available scripts.
+
+For a public website later, enable **GitHub Pages → Build and deployment → GitHub Actions** in the repository settings, then manually run the **Publish browser site** workflow. Pushing code alone does not publish it. The browser site can also cache its app files for offline use through its **Enable offline** button.
+
 Windows-first, offline-first local file viewer under development. The stage-7 prototype opens TXT, Markdown, PDF, PNG/JPEG/WebP, DOCX, reflowable DRM-free EPUB, CSV/TSV and XLSX through the shared protected Windows broker. See the prototype instructions for reading-view, printing and resource limits; this is not a qualified public release.
 
 **Local deployment status:** the 0.0.7 source/portable build contains these adapters, but Windows Application Control blocked the final unsigned launcher. Installation was not attempted; the installed 0.0.6 application remains text-only. See the step 7 report for evidence and the approved-signing prerequisite.
